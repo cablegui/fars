@@ -1,30 +1,38 @@
 [![Build Status](https://travis-ci.org/cablegui/fars.svg?branch=master)](https://travis-ci.org/cablegui/fars)
 [![Build status](https://ci.appveyor.com/api/projects/status/c6te6ehiviejf5st/branch/master?svg=true)](https://ci.appveyor.com/project/cablegui/fars/branch/master)
 
-R Markdown
-----------
+Coursera creating an R Package
+------------------------------
 
-This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+This is my first package setup in github to play with the concepts of building packages, creating documentation, testing, github versioning, continuous integration with builds on Linux and Windows to make the package CRAN ready. All triggered so as to make the R package ready to ship
 
-When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+Some of the important steps and reminders are
+---------------------------------------------
 
-``` r
-summary(cars)
-```
+-   library(devtools) \# Run this within the package folder
+-   document() \#This will document all the functions in the man directory
+-   setwd("..") \# Go one directory step up
+-   install("fars", build\_vignettes = TRUE) \#Enter your package name here. \#Including the build\_vignettes = TRUE will make the vignettes available
+-   check("fars") \#Shortcut to do a R CMD check .
+-   shell("rm -f fars.pdf") \# Create a pdf documentation of all the functions
+-   setwd("./fars") \#Reset to the top of the directory tress
 
-    ##      speed           dist       
-    ##  Min.   : 4.0   Min.   :  2.00  
-    ##  1st Qu.:12.0   1st Qu.: 26.00  
-    ##  Median :15.0   Median : 36.00  
-    ##  Mean   :15.4   Mean   : 42.98  
-    ##  3rd Qu.:19.0   3rd Qu.: 56.00  
-    ##  Max.   :25.0   Max.   :120.00
+### Create a vignette skeleton sitting within the package directory using
 
-Including Plots
----------------
+use\_vignette("fars\_function\_details")\# You can create as many vignettes as you need.
 
-You can also embed plots, for example:
+### Create a testing framework skeleton using
 
-![](Readme_files/figure-markdown_github/pressure-1.png)
+use\_testthat() \#Will create s testthat directory and testthat.R file
 
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+### To create a data store
+
+use\_data() \#FUnction to create an RDA dataset and stores in data folder. You need to create a data.R file describing the dataset for this to work before running checks.
+
+### Make the package Travis ready for LINUX builds
+
+use\_travis() \#Remember to insert the badge at the top of the Readme.md file so that whenever you make a change to the package and push to github an automatic integration test will be done.
+
+### Make the package AppVeyor ready for windows build
+
+use\_appveyor() \#Remember to insert the badge at the top of the Readme.md file so that whenever you make a change to the package and push to github an automatic integration test will be done.

@@ -3,13 +3,13 @@
 \docType{data}
 \name{demo_accident_2013}
 \alias{demo_accident_2013}
-\title{Postal Abbreviations for Mexico}
+\title{FARS accident data for the year 2013}
 \format{An object of class \code{tbl_df} (inherits from \code{tbl}, \code{data.frame}) with 30202 rows and 50 columns.}
 \usage{
 demo_accident_2013
 }
 \description{
-Postal Abbreviations for Mexico
+FARS accident data for the year 2013
 }
 \examples{
 \dontrun{
