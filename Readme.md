@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/cablegui/fars.svg?branch=master)](https://travis-ci.org/cablegui/fars)
+
 R Markdown
 ----------
 
