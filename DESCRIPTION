@@ -1,0 +1,16 @@
+Package: fars
+Title: Fatality Analysis Reporting System (FARS)
+Version: 0.0.0.9000
+Authors@R: person("Neville", "Andrade", email = "neville.andrade@gmail.com", role = c("aut", "cre"))
+Description: Functions to analyse FARS data.
+Depends:
+    R (>= 3.3.2)
+License: GPL
+Imports: dplyr, maps, readr, tidyr
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 5.0.1
+Suggests: knitr,
+    rmarkdown,
+    testthat
+VignetteBuilder: knitr
