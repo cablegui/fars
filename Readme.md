@@ -1,4 +1,5 @@
 [![Build Status](https://travis-ci.org/cablegui/fars.svg?branch=master)](https://travis-ci.org/cablegui/fars)
+[![Build status](https://ci.appveyor.com/api/projects/status/c6te6ehiviejf5st/branch/master?svg=true)](https://ci.appveyor.com/project/cablegui/fars/branch/master)
 
 R Markdown
 ----------
